@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>< FGS.dev /></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav class="centered">
+      <h1 class="logo">&lt FGS.dev /&gt</h1>
+      <ul class="nav__menu">
+        <li><a id="navHome" class="nav__link" href="#">Home</a></li>
+        <li><a id="navAbout" class="nav__link" href="#">About me</a></li>
+        <li><a id="navSkills" class="nav__link" href="#">Skills</a></li>
+        <li><a id="navProyects" class="nav__link" href="#">Proyects</a></li>
+        <li><a id="navContact" class="nav__link" href="#">Contact</a></li>
+        <li>
+          <a href="#"><button id="navResume" class="btn">Resume</button></a>
+        </li>
+        <li>
+          <ul class="nav__menu-lang">
+            <li><img id="lang-es-button"src="https://www.countryflags.io/es/flat/32.png" alt="Spanish Flag" ></li>
+            <li><img id="lang-en-button"src="https://www.countryflags.io/us/flat/32.png" alt="Spanish Flag" ></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="image">
+        <img class="hero-background" src="./media/hero-img.jpg" alt="Hero">
+      </div>
+      <div class="content centered">
+        <div>
+          <h3 id="heroTitle">Hi! Welcome to my portfolio</h3>
+          <h3 id="heroSubtitle">I'm Franco Sanchez</h3>
+        </div>
+        <div class="typing-wraper">
+          <p id="heroTypingStatic">I'm a </p>
+          <span class="dynamic-txts">Developer</span>
+        </div>
+      </div>
+    </section>
+    <section class="about">
+      <div class="about__text reveal">
+        <h3 id="aboutTitle" class="about__title reveal">About me</h3>
+        <span id="aboutTitleBg" class="about__bg reveal">About me</span>
+        <div id="aboutDescription">
+          <p id="aboutTextFirst" class="about__paragraph">
+            My name is Franco Gabriel Sanchez, I'm 29 years old and I live in Buenos Aires, Argentina. I'm a self-taught full-stack developer and passionate about programming. What interests me most in web application development is being able to do something that people find useful and can access it from anywhere in the world.
+          </p>
+          <p id="aboutTextSecond" class="about__paragraph">
+            As a person with capacities for communication and socialization I have a natural predisposition to teamwork and I always try to do my best so that the group reaches its objectives. In my spare time I like to play the guitar, hang out with my friends, meet new people, work on personal projects, and play video games. Nice to meet you!
+          </p>
+        </div>
+        <div class="about__btn-container">
+          <button id="aboutButton" class="btn about__btn">Contact this guy</button>
+        </div>
+      </div>
+      <div class="about__img">
+        <div class="about__img--shape reveal">
+          <img src="./media/about-bg.png" alt="Shape">
+        </div>
+        <div class="about__img--shape reveal">
+          <img src="./media/about-bg-2.png" alt="Shape">
+        </div>
+        <div class="about__img--photo reveal">
+          <img src="./media/portrait.png" alt="Portrait photo">
+        </div>
+      </div>
+    </section>
+    <section class="skills">
+      
+    </section>
+  </main>
+  <script src="app.js" ></script>
+</body>
+</html>
