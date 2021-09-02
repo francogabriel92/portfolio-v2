@@ -7,8 +7,18 @@
   <title>< FGS.dev /></title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/493465ab3f.js" crossorigin="anonymous"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTNK7X6VH5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZTNK7X6VH5');
+  </script>
 </head>
 <body>
   <header>
@@ -77,7 +87,151 @@
       </div>
     </section>
     <section class="skills">
-      
+      <div class="skills__text">
+        <h3 id="skillsTitle" class="skills__title reveal">Skills</h3>
+        <span id="skillsTitleBg" class="skills__bg reveal">Skills</span>
+      </div>
+      <div class="skills__circles reveal">
+        <div class="circle clickable">
+          <span></span>
+          <span></span>
+          <span></span>
+          <div class="circle__content">
+            <h3 id="skillsClick" >Click Me</h3>
+          </div>
+        </div>
+        <div class="skills-container ">
+          <div class="circle floating">
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="circle__content">
+              <i class="fab fa-js-square"></i>
+              <h3>JavaScript</h3>
+            </div>
+          </div>
+          <div class="circle floating">
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="circle__content">
+              <i class="fab fa-css3-alt"></i>
+              <h3>CSS</h3>
+            </div>
+          </div>
+          <div class="circle floating">
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="circle__content">
+              <i class="fab fa-html5"></i>
+              <h3>HTML</h3>
+            </div>
+          </div>
+          <div class="circle floating">
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="circle__content">
+              <i class="fab fa-react"></i>
+              <h3>React</h3>
+            </div>
+          </div>
+          <div class="circle floating">
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="circle__content">
+              <i class="fab fa-node-js"></i>
+              <h3>NodeJs</h3>
+            </div>
+          </div>
+          <div class="circle floating">
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="circle__content">
+              <i class="fab fa-npm"></i>
+              <h3>Npm</h3>
+            </div>
+          </div>
+          <div class="circle floating">
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="circle__content">
+              <i class="fab fa-git-alt"></i>
+              <h3>Git</h3>
+            </div>
+          </div>
+          <div class="circle floating">
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="circle__content">
+              <img src="./media/mongodb.svg" alt="MongoDb icon" class="icon-filter">
+              <h3>Mongodb</h3>
+            </div>
+          </div>
+          <div class="circle floating">
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="circle__content">
+              <img src="./media/mysql.svg" alt="MongoDb icon" class="icon-filter">
+              <h3>Mysql</h3>
+            </div>
+          </div>
+          <div class="circle floating">
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="circle__content">
+              <img src="./media/csharp-icon.svg" alt="MongoDb icon" class="icon-filter">
+              <h3>C#</h3>
+            </div>
+          </div>
+          <div class="circle floating">
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="circle__content">
+              <i class="fab fa-java"></i>
+              <h3>Java</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="proyects-container">
+      <div class="proyects__text">
+        <h3 id="proyectsTitle" class="about__title reveal">Proyects</h3>
+        <span id="proyectsTitleBg" class="about__bg reveal">Proyects</span>
+      </div>
+      <div class="cards-container reveal">
+        <div class="card rgb">
+          <div id="gymapp-img" class="card-image"></div>
+          <div class="card-text">
+            <h3 id="proyectCardTitle">GymApp</h3>
+            <p id="proyectCardText"> One page web-app dedicated to the management of gym clients through a CRUD system. The user interface was made with ReactJs and React Router.<br><br>The backend is designed with NodeJs and Express, has a login system with Json Web Token technology, tests performed with Jest and the database is based on MongoDB. <br><br> Techs and frameworks used: ReactJs, React Router, React Bootstrap, Axios, Mongoose, Formik, Yup, MongoDb, JWT, Jest, Bcrypt. </p>
+          </div>
+          <div class="card-footer">
+            <p class="nav__link">Frontend</a>
+            <p class="nav__link">Backend</a>
+            <p class="nav__link">Demo</button>
+          </div>
+        </div>
+        <div class="card rgb">
+          <div id="portfolio-img" class="card-image"></div>
+          <div class="card-text">
+            <h3 id="proyectCardTitle">Portolio Web</h3>
+            <p id="proyectCardText">  One page web portfolio realized entirely with HTML5, CSS3 and native JavaScript.<br><br>Techs and frameworks used: ParticleJs, Hover.css.</p>
+          </div>
+          <div class="card-footer">
+            <p class="nav__link">Go to Code</p>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
   <script src="app.js" ></script>

@@ -24,6 +24,9 @@ const strings = {
     aboutTextFirst: "My name is Franco Gabriel Sanchez, I'm 29 years old and I live in Buenos Aires, Argentina. I'm a self-taught full-stack developer and passionate about programming. What interests me most in web application development is being able to do something that people find useful and can access it from anywhere in the world.",
     aboutTextSecond: "As a person with capacities for communication and socialization I have a natural predisposition to teamwork and I always try to do my best so that the group reaches its objectives. In my spare time I like to play the guitar, hang out with my friends, meet new people, work on personal projects, and play video games. Nice to meet you!",
     aboutButton: "Contact this guy",
+    skillsClick: "Click me",
+    skillsTitle: "Skills",
+    skillsTitleBg: "Skills",
   },
   es: {
     navHome: "Inicio",
@@ -50,6 +53,9 @@ const strings = {
     aboutTextFirst: "Mi nombre es Franco Gabriel Sanchez, tengo 29 años y vivo en Buenos Aires, Argentina. Soy un desarrollador Full-Stack autodidacta y apasionado de la programación. Lo que más me interesa en el desarrollo de aplicaciones web es el poder realizar algo que la gente encuentre útil y pueda acceder a ello desde cualquier parte del mundo.",
     aboutTextSecond: "Al ser una persona con capacidades para la comunicación y la sociabilización tengo predisposición al trabajo en equipo y a dar lo mejor de mi parte para que el grupo llegue a sus objetivos. En mis tiempos libres me gusta tocar la guitarra, salir con mis amigos, conocer gente nueva, trabajar en proyectos personales y jugar videojuegos. ¡Encantado de conocerte!",
     aboutButton: "Habla conmigo",
+    skillsClick: "Hazme click",
+    skillsTitle: "Habilidades",
+    skillsTitleBg: "Habilidades",
   }
 };
 
@@ -104,4 +110,14 @@ function revealOnScroll() {
   }
 }
 
-window.addEventListener('scroll', revealOnScroll, { passive: true })
+window.addEventListener('scroll', revealOnScroll, { passive: true });
+
+// Skills click animation
+
+document.querySelector('.circle.clickable').addEventListener('click', () => {
+  document.querySelector('.circle.clickable').classList.add('clicked');
+  const appearingElements = document.querySelectorAll('.circle.floating');
+  appearingElements.forEach(element => {
+    element.classList.add('clicked')
+  });
+})
