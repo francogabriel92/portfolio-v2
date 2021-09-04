@@ -691,15 +691,14 @@ header:after {
   grid-area: image;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+}
+
+#gymapp-img {
+  background:  linear-gradient(#fff0 0%, #fff0 70%, #071108 100%), url("./media/gym-app-thumbnail.png");
   background-size: cover;
 }
 
-.card-image:nth-child(0) {
-  background:  linear-gradient(#fff0 0%, #fff0 70%, #071108 100%), url("./media/gym-app-thumbnail.png");
-
-}
-
-.card-image:nth-child(1) {
+#portfolio-img {
   background:  linear-gradient(#fff0 0%, #fff0 70%, #071108 100%), url("./media/portfolio-thumbnail.png");
   background-size: cover;
 }
@@ -708,6 +707,10 @@ header:after {
   grid-area: text;
   margin: 25px;
   overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   scrollbar-width: thin;
 }
 
@@ -719,6 +722,7 @@ header:after {
   padding-right: 5px;
   padding-bottom: 10px;
   overflow-y: auto;
+  white-space: pre-line;
 }
 .card-text h3 {
   text-transform: uppercase;
@@ -772,6 +776,30 @@ header:after {
   0% {background-position: 0% 50%;}
   50% {background-position: 100% 50%;}
   100% {background-position: 0% 50%;}
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0 5%;
+  font-family: 'Raleway',sans-serif;
+  color: #F5E9E2;
+  overflow: hidden;
+  height: 700px;
+  padding-top: 60px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-divider {
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
 }
 
 .reveal {

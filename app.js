@@ -27,6 +27,11 @@ const strings = {
     skillsClick: "Click me",
     skillsTitle: "Skills",
     skillsTitleBg: "Skills",
+    proyectsTitle: "Proyects",
+    proyectsTitleBg: "Proyects",
+    proyectGymDesc:"One page web-app dedicated to the management of gym clients through a CRUD system.\r\n \r\nThe user interface was made with ReactJs and React Router.\r\n \r\nThe backend is designed with NodeJs and Express, has a login system with Json Web Token technology, tests performed with Jest and the database is based on MongoDB.\r\n \r\nTechs and frameworks used: ReactJs, React Router, React Bootstrap, Axios, Mongoose, Formik, Yup, MongoDb, JWT, Jest, Bcrypt.",
+    proyectPortfolioDesc: "One page web portfolio realized entirely with HTML5, CSS3 and native JavaScript.\r\n \r\nThis page has multilanguage functionaliby developed by Js, animations and its prototype has been done with Adobe XD.",
+    goToCode: "Go to code"
   },
   es: {
     navHome: "Inicio",
@@ -56,6 +61,11 @@ const strings = {
     skillsClick: "Hazme click",
     skillsTitle: "Habilidades",
     skillsTitleBg: "Habilidades",
+    proyectsTitle: "Proyectos",
+    proyectsTitleBg: "Proyectos",
+    proyectGymDesc:" Aplicación de una página dedicada a la gestión de clientes de gimnasios mediante un sistema CRUD.\r\n \r\nLa interfaz de usuario fue realizada con ReactJs y React Router. El backend esta diseñado con NodeJs y Express, cuenta con un sistema de login con tecnología de Json Web Token, testings realizados con Jest y la base de datos esta basada en MongoDB.\r\n \r\nTecnologías y librerías utilizadas: ReactJs, React Router, React Bootstrap, Axios, Mongoose, Formik, Yup, MongoDb, JWT, Jest, Bcrypt.",
+    proyectPortfolioDesc: "Portfolio Web de una página realizado enteramente con HTML5, CSS3 y JavaScript nativo.\r\n \r\nEsta página contiene funcionabilidad Multilenguaje a traves de Js, animaciones y su diseño fue maquetado en Adobe XD.",
+    goToCode: "Ir al código"
   }
 };
 
