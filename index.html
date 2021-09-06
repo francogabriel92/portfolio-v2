@@ -25,12 +25,15 @@
   <header id="home">
     <nav class="centered">
       <h1 class="logo">&lt FGS-dev /&gt</h1>
+      <div class="nav__menu-btn">
+        <div class="nav__menu-btn__burguer"></div>
+      </div>
       <ul class="nav__menu">
-        <li><a id="navHome" class="nav__link" href="#home">Home</a></li>
-        <li><a id="navAbout" class="nav__link" href="#about-section">About me</a></li>
-        <li><a id="navSkills" class="nav__link" href="#skills-section">Skills</a></li>
-        <li><a id="navProyects" class="nav__link" href="#proyects-section">Proyects</a></li>
-        <li><a id="navContact" class="nav__link" href="#contact-section">Contact</a></li>
+        <li><a id="navHome" class="nav__link navItem" href="#home">Home</a></li>
+        <li><a id="navAbout" class="nav__link navItem" href="#about-section">About me</a></li>
+        <li><a id="navSkills" class="nav__link navItem" href="#skills-section">Skills</a></li>
+        <li><a id="navProyects" class="nav__link navItem" href="#proyects-section">Proyects</a></li>
+        <li><a id="navContact" class="nav__link navItem" href="#contact-section">Contact</a></li>
         <li>
           <a href="#"><button id="navResume" class="btn">Resume</button></a>
         </li>
@@ -46,7 +49,7 @@
   <main>
     <section class="hero">
       <div class="image">
-        <img class="hero-background" src="./media/hero-img.jpg" alt="Hero">
+        <img class="hero-background" src="./media/hero-img-min.jpg" alt="Hero">
       </div>
       <div class="content centered">
         <div>
@@ -72,15 +75,15 @@
           </p>
         </div>
         <div class="about__btn-container">
-          <button id="aboutButton" class="btn about__btn">Contact this guy</button>
+          <a href="#contact-section"><button id="aboutButton" class="btn about__btn">Contact this guy</button></a>
         </div>
       </div>
       <div class="about__img">
         <div class="about__img--shape reveal">
-          <img src="./media/about-bg.png" alt="Shape">
+          <img src="./media/about-bg-resize.png" alt="Shape">
         </div>
         <div class="about__img--shape reveal">
-          <img src="./media/about-bg-2.png" alt="Shape">
+          <img src="./media/about-bg-2-resize.png" alt="Shape">
         </div>
         <div class="about__img--photo reveal">
           <img src="./media/portrait.png" alt="Portrait photo">

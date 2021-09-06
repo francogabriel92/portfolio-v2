@@ -163,12 +163,46 @@ document.querySelector('.circle.clickable').addEventListener('click', () => {
   emailjs.init("user_OeGxdzrEFcXbnNGxL8MKV");
 })();
 
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    emailjs.sendForm( 'service_ozusnmn','template_sbn5v4o', this)
-        .then(function() {
-            console.log('SUCCESS!');
-        }, function(error) {
-            console.log('FAILED...', error);
-        });
-  });
+document.getElementById('contact-form').addEventListener('submit', (event) => {
+  event.preventDefault();
+  emailjs.sendForm( 'service_ozusnmn','template_sbn5v4o', this)
+    .then(function() {
+      console.log('SUCCESS!');
+    }, function(error) {
+      console.log('FAILED...', error);
+    }
+  );
+});
+
+// Burguer menu
+
+const menuBtn = document.querySelector('.nav__menu-btn');
+const navMenu = document.querySelector('.nav__menu');
+const navLogo = document.querySelector('.logo');
+const navMenuItems = document.querySelectorAll('.navItem');
+let menuOpen = false;
+menuBtn.addEventListener('click', () => {
+  if(menuOpen) {
+    menuBtn.classList.remove('open');
+    navMenu.classList.remove('open');
+    navLogo.classList.remove('open');
+    menuOpen = false;
+  } else {
+    menuBtn.classList.add('open');
+    navMenu.classList.add('open');
+    navLogo.classList.add('open');
+    menuOpen = true;
+  }
+})
+console.log(navMenuItems);
+navMenuItems.forEach( element => {
+  element.addEventListener('click', () => {
+    if (menuOpen) {
+      menuBtn.classList.remove('open');
+      navMenu.classList.remove('open');
+      navLogo.classList.remove('open');
+      menuOpen = false;
+      console.log('clicked');
+    }
+  })
+})
