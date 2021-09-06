@@ -552,8 +552,6 @@ header:after {
   }
 }
 
-
-
 .circle.clickable.clicked {
   transform-origin: left;
   animation: flyAway 1.5s linear ;
@@ -1131,6 +1129,6 @@ header:after {
 
 @media only screen and (max-width: 370px) {
   .about {
-    height: 110vh;
+    height: 130vh;
   }
 }
