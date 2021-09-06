@@ -31,7 +31,21 @@ const strings = {
     proyectsTitleBg: "Proyects",
     proyectGymDesc:"One page web-app dedicated to the management of gym clients through a CRUD system.\r\n \r\nThe user interface was made with ReactJs and React Router.\r\n \r\nThe backend is designed with NodeJs and Express, has a login system with Json Web Token technology, tests performed with Jest and the database is based on MongoDB.\r\n \r\nTechs and frameworks used: ReactJs, React Router, React Bootstrap, Axios, Mongoose, Formik, Yup, MongoDb, JWT, Jest, Bcrypt.",
     proyectPortfolioDesc: "One page web portfolio realized entirely with HTML5, CSS3 and native JavaScript.\r\n \r\nThis page has multilanguage functionaliby developed by Js, animations and its prototype has been done with Adobe XD.",
-    goToCode: "Go to code"
+    goToCode: "Go to code",
+    contactTitle: "Contact",
+    contactTitleBg: "Contact",
+    contactText: "Do you like what you see?",
+    contactSubtitleAccent: "Let's work together!",
+    formTitle: "You can send me a message through this form:",
+    formName: "Name",
+    formMail: "Mail",
+    formSubject: "Subject",
+    formMessage: "Message",
+    formSend: "Send",
+    contactOr: "Or",
+    mailMe: "Mail me",
+    followMe: "Follow me",
+    contactMe: "Contact me"
   },
   es: {
     navHome: "Inicio",
@@ -65,7 +79,21 @@ const strings = {
     proyectsTitleBg: "Proyectos",
     proyectGymDesc:" Aplicación de una página dedicada a la gestión de clientes de gimnasios mediante un sistema CRUD.\r\n \r\nLa interfaz de usuario fue realizada con ReactJs y React Router. El backend esta diseñado con NodeJs y Express, cuenta con un sistema de login con tecnología de Json Web Token, testings realizados con Jest y la base de datos esta basada en MongoDB.\r\n \r\nTecnologías y librerías utilizadas: ReactJs, React Router, React Bootstrap, Axios, Mongoose, Formik, Yup, MongoDb, JWT, Jest, Bcrypt.",
     proyectPortfolioDesc: "Portfolio Web de una página realizado enteramente con HTML5, CSS3 y JavaScript nativo.\r\n \r\nEsta página contiene funcionabilidad Multilenguaje a traves de Js, animaciones y su diseño fue maquetado en Adobe XD.",
-    goToCode: "Ir al código"
+    goToCode: "Ir al código",
+    contactTitle: "Contacto",
+    contactTitleBg: "Contacto",
+    contactText: "¿Te gusta lo que ves?",
+    contactSubtitleAccent: "¡Vamos a trabajar juntos!",
+    formTitle: "Puedes enviarme un mensaje a través de este formulario:",
+    formName: "Nombre",
+    formMail: "Mail",
+    formSubject: "Asunto",
+    formMessage: "Mensaje",
+    formSend: "Enviar",
+    contactOr: "O",
+    mailMe: "Envíame un mail",
+    followMe: "Sígueme",
+    contactMe: "Contáctame"
   }
 };
 
@@ -94,7 +122,6 @@ let letter = '';
 
 const langSelector = (selectedLanguage) => {
   const stringArray = Object.entries(strings[selectedLanguage])
-  console.log(stringArray);
   for ( let i = 0; i < stringArray.length; i++ ){
     console.log(stringArray[i][0],stringArray[i][1]);
     stringArray[i][0] === 'heroTypingDynamic'
@@ -114,9 +141,7 @@ function revealOnScroll() {
   let windowHeight = window.innerHeight;
   for ( let i = 0; i < items.length; i++ ) {
     let revealTop = items[i].getBoundingClientRect().top;
-    revealTop < ( windowHeight - revealPoint )
-      ? items[i].classList.add('active')
-      : items[i].classList.remove('active');
+    if (revealTop < ( windowHeight - revealPoint )) items[i].classList.add('active');
   }
 }
 
@@ -130,4 +155,20 @@ document.querySelector('.circle.clickable').addEventListener('click', () => {
   appearingElements.forEach(element => {
     element.classList.add('clicked')
   });
-})
+});
+
+// Contact form handler
+
+(function() {
+  emailjs.init("user_OeGxdzrEFcXbnNGxL8MKV");
+})();
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    emailjs.sendForm( 'service_ozusnmn','template_sbn5v4o', this)
+        .then(function() {
+            console.log('SUCCESS!');
+        }, function(error) {
+            console.log('FAILED...', error);
+        });
+  });

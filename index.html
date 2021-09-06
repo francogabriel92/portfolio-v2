@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./styles/styles.css">
   <script src="https://kit.fontawesome.com/493465ab3f.js" crossorigin="anonymous"></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTNK7X6VH5"></script>
@@ -19,17 +19,18 @@
 
     gtag('config', 'G-ZTNK7X6VH5');
   </script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
 <body>
-  <header>
+  <header id="home">
     <nav class="centered">
-      <h1 class="logo">&lt FGS.dev /&gt</h1>
+      <h1 class="logo">&lt FGS-dev /&gt</h1>
       <ul class="nav__menu">
-        <li><a id="navHome" class="nav__link" href="#">Home</a></li>
-        <li><a id="navAbout" class="nav__link" href="#">About me</a></li>
-        <li><a id="navSkills" class="nav__link" href="#">Skills</a></li>
-        <li><a id="navProyects" class="nav__link" href="#">Proyects</a></li>
-        <li><a id="navContact" class="nav__link" href="#">Contact</a></li>
+        <li><a id="navHome" class="nav__link" href="#home">Home</a></li>
+        <li><a id="navAbout" class="nav__link" href="#about-section">About me</a></li>
+        <li><a id="navSkills" class="nav__link" href="#skills-section">Skills</a></li>
+        <li><a id="navProyects" class="nav__link" href="#proyects-section">Proyects</a></li>
+        <li><a id="navContact" class="nav__link" href="#contact-section">Contact</a></li>
         <li>
           <a href="#"><button id="navResume" class="btn">Resume</button></a>
         </li>
@@ -58,7 +59,7 @@
         </div>
       </div>
     </section>
-    <section class="about">
+    <section id="about-section" class="about">
       <div class="about__text reveal">
         <h3 id="aboutTitle" class="about__title reveal">About me</h3>
         <span id="aboutTitleBg" class="about__bg reveal">About me</span>
@@ -86,7 +87,7 @@
         </div>
       </div>
     </section>
-    <section class="skills">
+    <section class="skills" id="skills-section">
       <div class="skills__text">
         <h3 id="skillsTitle" class="skills__title reveal">Skills</h3>
         <span id="skillsTitleBg" class="skills__bg reveal">Skills</span>
@@ -203,7 +204,7 @@
         </div>
       </div>
     </section>
-    <section class="proyects-container">
+    <section class="proyects-container" id="proyects-section">
       <div class="proyects__text">
         <h3 id="proyectsTitle" class="about__title reveal">Proyects</h3>
         <span id="proyectsTitleBg" class="about__bg reveal">Proyects</span>
@@ -233,38 +234,63 @@
         </div>
       </div>
     </section>
-    <section class="contact-container">
+    <section class="contact-container" id="contact-section">
       <div class="contact__title reveal">
-        <h3 id="ContactTitle" class="skills__title reveal">Contact</h3>
-        <span id="ContactTitleBg" class="skills__bg reveal">Contact</span>
+        <h3 id="contactTitle" class="about__title reveal">Contact</h3>
+        <span id="contactTitleBg" class="skills__bg reveal">Contact</span>
       </div>
+      <p id="contactText" class="contact-subtitle reveal">Do you like what you see?</p>
+      <span id="contactSubtitleAccent" class="reveal">Let's work together!</span>
       <div class="contact-divider reveal">
         <div class="contact-form">
-          <h3>You can send me a message through this form</h3>
-          <form>
-            <label class="input-underlined">
-              <input type="text" required>
-              <span>Name</span>
-            </label>
+          <p id="formTitle">You can send me a message through this form:</p>
+          <form id="contact-form">
+            <div class="input-container">
+              <input name="from_name" type="text" required/>
+              <label id="formName">Name</label>		
+            </div>
+            <div class="input-container">
+              <input name="from_mail" type="mail" required/>
+              <label id="formMail">Mail</label>		
+            </div>
+            <div class="input-container">
+              <input name="from_subject" type="subject" required/>
+              <label id="formSubject">Subject</label>		
+            </div>
+            <div class="input-container">
+              <textarea name="message" required></textarea>
+              <label id="formMessage">Message</label>		
+            </div>
+            <div>
+              <button type="submit" id="formSend" class="btn">Send</button>
+            </div>
           </form>
+        </div>
+        <div>
+          <p id="contactOr">Or</p>
         </div>
         <div class="contact-alternative">
           <a href="mailto:francog.sanchez@hotmail.com" class="contact-links">
             <i class="far fa-envelope"></i>
-            <p class="lang-en">Mail me</p>
+            <p id="mailMe">Mail me</p>
           </a>
           <a href="https://github.com/francogabriel92" target="_blank" class="contact-links">
             <i class="fab fa-github"></i>
-            <p class="lang-en">Follow me</p>
+            <p id="followMe">Follow me</p>
           </a>
           <a href="https://www.linkedin.com/in/franco-sanchez-a38460215/" target="_blank" class="contact-links">
             <i class="fab fa-linkedin"></i>
-            <p class="lang-en">Contact me</p>
+            <p id="contactMe">Contact me</p>
           </a>
         </div>
       </div>
     </section>
   </main>
-  <script src="app.js" ></script>
+  <footer>
+    <div class="footer-copy">
+      <p>Copyright &copy 2021 Franco Gabriel Sanchez</p>
+    </div>
+  </footer>
+  <script src="./scripts/app.js" ></script>
 </body>
 </html>
