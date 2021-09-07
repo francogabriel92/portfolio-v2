@@ -37,7 +37,7 @@
         <li><a id="navProyects" class="nav__link navItem" href="#proyects-section">Proyects</a></li>
         <li><a id="navContact" class="nav__link navItem" href="#contact-section">Contact</a></li>
         <li>
-          <a href="#"><button id="navResume" class="btn">Resume</button></a>
+          <a id="navResumeButton" href="./media/resume.pdf" to="_blank"><button id="navResume" class="btn">Resume</button></a>
         </li>
         <li>
           <ul class="nav__menu-lang">
@@ -81,15 +81,18 @@
         </div>
       </div>
       <div class="about__img">
-        <div class="about__img--shape reveal">
-          <img src="./media/about-bg-resize.png" alt="Shape">
-        </div>
-        <div class="about__img--shape reveal">
-          <img src="./media/about-bg-2-resize.png" alt="Shape">
-        </div>
-        <div class="about__img--photo reveal">
-          <img src="./media/portrait.png" alt="Portrait photo">
-        </div>
+        <!--
+          <div class="about__img--shape reveal">
+            <img src="./media/about-bg-resize.png" alt="Shape">
+          </div>
+          <div class="about__img--shape reveal">
+            <img src="./media/about-bg-2-resize.png" alt="Shape">
+            </div>
+          <div class="about__img--photo reveal">
+            <img src="./media/portrait.png" alt="Portrait photo">
+          </div>
+        -->
+        <img class="reveal" src="./media/about-img.png" alt="Photo" >
       </div>
     </section>
     <section class="skills" id="skills-section">
@@ -222,19 +225,19 @@
             <p id="proyectGymDesc"> One page web-app dedicated to the management of gym clients through a CRUD system. The user interface was made with ReactJs and React Router.<br><br>The backend is designed with NodeJs and Express, has a login system with Json Web Token technology, tests performed with Jest and the database is based on MongoDB. <br><br> Techs and frameworks used: ReactJs, React Router, React Bootstrap, Axios, Mongoose, Formik, Yup, MongoDb, JWT, Jest, Bcrypt. </p>
           </div>
           <div class="card-footer">
-            <a class="nav__link">Frontend</a>
-            <a class="nav__link">Backend</a>
-            <a class="nav__link">Demo</a>
+            <a class="nav__link" href="https://github.com/francogabriel92/gymapp-react-frontend" to="_blank">Frontend</a>
+            <a class="nav__link" href="https://github.com/francogabriel92/gymapp-react-backend" to="_blank">Backend</a>
+            <a class="nav__link" href="https://gym-app-fgs.herokuapp.com" to="_blank">Demo</a>
           </div>
         </div>
         <div class="card rgb">
           <div id="portfolio-img" class="card-image"></div>
           <div class="card-text">
             <h3>Portolio Web</h3>
-            <p id="proyectPortfolioDesc">One page web portfolio realized entirely with HTML5, CSS3 and native JavaScript.<br><br>Techs and frameworks used: ParticleJs, Hover.css.</p>
+            <p id="proyectPortfolioDesc">One page web portfolio realized entirely with HTML5, CSS3 and native JavaScript.<br><br>This page has multilanguage functionaliby developed by Js, animations and its prototype has been done with Adobe XD.</p>
           </div>
           <div class="card-footer">
-            <a id="goToCode" class="nav__link" href="#">Go to Code</a>
+            <a id="goToCode" class="nav__link" href="https://github.com/francogabriel92/portfolio-v2" to="_blank">Go to Code</a>
           </div>
         </div>
       </div>

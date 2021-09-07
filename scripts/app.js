@@ -13,11 +13,10 @@ const strings = {
       "Developer",
       "Designer",
       "Freelancer",
-      "Enthusiastic",
       "Motivated",
       "Collaborative",
       "Passionated",
-      "Optimistic"
+      "Positive"
     ],
     aboutTitle: "About Me",
     aboutTitleBg: "About Me",
@@ -123,6 +122,7 @@ let letter = '';
 // Language selector
 
 let actualLanguage = "en";
+const navResumeButton = document.getElementById('navResumeButton');
 
 const langSelector = (selectedLanguage) => {
   const stringArray = Object.entries(strings[selectedLanguage])
@@ -132,6 +132,11 @@ const langSelector = (selectedLanguage) => {
       : document.querySelector(`#${stringArray[i][0]}`).textContent = stringArray[i][1];
   }
   actualLanguage === "en" ? actualLanguage = "es" : actualLanguage = "en";
+  navResumeButton.addEventListener('click', () => {
+    actualLanguage === "en"
+      ? navResumeButton.href = "./media/resume.pdf"
+      : navResumeButton.href = "./media/Curriculum.pdf"
+  })
 }
 
 document.querySelector('#lang-es-button').addEventListener('click', () => langSelector("es"))
@@ -233,3 +238,4 @@ navMenuItems.forEach( element => {
 document.querySelector('#modalClose').addEventListener('click', () => {
   modal.classList.add('hidden'); 
 });
+
