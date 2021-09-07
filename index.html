@@ -249,7 +249,7 @@
       <div class="contact-divider reveal">
         <div class="contact-form">
           <p id="formTitle">You can send me a message through this form:</p>
-          <form id="contact-form">
+          <form id="contact-form" autocomplete="off">
             <div class="input-container">
               <input name="from_name" type="text" required/>
               <label id="formName">Name</label>		
@@ -296,6 +296,13 @@
       <p>Copyright &copy 2021 Franco Gabriel Sanchez</p>
     </div>
   </footer>
+  <div class="modal-container hidden">
+    <div class="modal-content">
+      <h3 id="modalTitle"></h3>
+      <p id="modalContent"></p>
+      <button class="btn" id="modalClose">Close</button>
+    </div>
+  </div>
   <script src="./scripts/app.js" ></script>
 </body>
 </html>

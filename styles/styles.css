@@ -971,6 +971,43 @@ header:after {
   color: #F5E9E2;
 }
 
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  background-color: #071108;
+  height: 180px;
+  width: 280px;
+  border: 2px solid #D44D5C ;
+  border-radius: 9px;
+  padding: 20px;
+}
+
+.modal-content h3 i {
+  color: #D44D5C;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
 @media only screen and (max-width: 1236px) {
   nav {
     flex-direction: column;
@@ -999,6 +1036,7 @@ header:after {
   .nav__menu.open {
     background: #071108;
     transform: translateY(0);
+    padding-top: 20px;
   }
 
   .nav__menu-btn {
@@ -1052,12 +1090,17 @@ header:after {
 
   .logo.open {
     position: fixed;
+    top:20px;
   }
   
   .nav__menu-btn.open .nav__menu-btn__burguer{
     transform: translateX(-50px);
     background: transparent;
     position: fixed;
+  }
+
+  .nav__menu-btn.open {
+    top:22px
   }
   
   .nav__menu-btn.open .nav__menu-btn__burguer::before {

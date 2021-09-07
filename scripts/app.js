@@ -45,7 +45,8 @@ const strings = {
     contactOr: "Or",
     mailMe: "Mail me",
     followMe: "Follow me",
-    contactMe: "Contact me"
+    contactMe: "Contact me",
+    modalClose: "Close"
   },
   es: {
     navHome: "Inicio",
@@ -93,7 +94,8 @@ const strings = {
     contactOr: "O",
     mailMe: "Envíame un mail",
     followMe: "Sígueme",
-    contactMe: "Contáctame"
+    contactMe: "Contáctame",
+    modalClose: "Cerrar"
   }
 };
 
@@ -120,14 +122,16 @@ let letter = '';
 
 // Language selector
 
+let actualLanguage = "en";
+
 const langSelector = (selectedLanguage) => {
   const stringArray = Object.entries(strings[selectedLanguage])
   for ( let i = 0; i < stringArray.length; i++ ){
-    console.log(stringArray[i][0],stringArray[i][1]);
     stringArray[i][0] === 'heroTypingDynamic'
       ? dynamicTexts = stringArray[i][1]
       : document.querySelector(`#${stringArray[i][0]}`).textContent = stringArray[i][1];
-  } 
+  }
+  actualLanguage === "en" ? actualLanguage = "es" : actualLanguage = "en";
 }
 
 document.querySelector('#lang-es-button').addEventListener('click', () => langSelector("es"))
@@ -163,15 +167,34 @@ document.querySelector('.circle.clickable').addEventListener('click', () => {
   emailjs.init("user_OeGxdzrEFcXbnNGxL8MKV");
 })();
 
-document.getElementById('contact-form').addEventListener('submit', (event) => {
+const modal = document.querySelector('.modal-container');
+const modalTitle = document.querySelector('#modalTitle');
+const modalContent = document.querySelector('#modalContent');
+const contactForm = document.getElementById('contact-form');
+contactForm.addEventListener('submit', (event) => {
   event.preventDefault();
-  emailjs.sendForm( 'service_ozusnmn','template_sbn5v4o', this)
-    .then(function() {
-      console.log('SUCCESS!');
-    }, function(error) {
-      console.log('FAILED...', error);
-    }
-  );
+  emailjs.sendForm( 'service_ozusnmn','template_sbn5v4o', contactForm)
+    .then(() => {
+      if (actualLanguage === "en") {
+        modalTitle.innerHTML = "Success! <i class=\"far fa-check-circle\">";
+        modalContent.textContent = "Remember to attach your mail in the form for a response. Thank your for contact me!";
+      } else {
+        modalTitle.innerHTML = "Listo! <i class=\"far fa-check-circle\">";
+        modalContent.textContent = "Recuerda incluir tu mail en el formulario para una respuesta. ¡Gracias por contactarte!";;
+      }
+      modal.classList.remove('hidden');
+    })
+    .catch ( (error) => {
+      if (actualLanguage === "en") {
+        modalTitle.innerHTML = "Oops! <i class=\"far fa-times-circle\">";
+        modalContent.textContent = "Something went wrong :(";
+      } else {
+        modalTitle.innerHTML = "Ups! <i class=\"far fa-times-circle\">";
+        modalContent.textContent = "Algo salió mal :(";;
+      }
+      modal.classList.remove('hidden');
+      console.log(error);
+    })
 });
 
 // Burguer menu
@@ -194,7 +217,6 @@ menuBtn.addEventListener('click', () => {
     menuOpen = true;
   }
 })
-console.log(navMenuItems);
 navMenuItems.forEach( element => {
   element.addEventListener('click', () => {
     if (menuOpen) {
@@ -202,7 +224,12 @@ navMenuItems.forEach( element => {
       navMenu.classList.remove('open');
       navLogo.classList.remove('open');
       menuOpen = false;
-      console.log('clicked');
     }
-  })
-})
+  });
+});
+
+// Modal button handler 
+
+document.querySelector('#modalClose').addEventListener('click', () => {
+  modal.classList.add('hidden'); 
+});
