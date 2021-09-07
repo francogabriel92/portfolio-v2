@@ -716,7 +716,7 @@ header:after {
 
 .proyects__text {
   position: relative;
-  align-self: flex-end;
+  align-self: flex-start;
 }
 
 .cards-container {
@@ -873,11 +873,14 @@ header:after {
 }
 
 .contact-form {
+  background: #d44d5d10 ;
+  margin: 0 5%;
   backdrop-filter: blur(10px);
-  border-radius: 10%;
+  border-radius: 20px ;
   padding: 30px;
   text-align: center;
   font-size: calc(16px + .2vw);
+  border: #D44D5C 2px dashed;
 }
 
 .contact-form form {
@@ -945,6 +948,10 @@ header:after {
 	top:-12px;
 	font-size:calc(12px + .2vw);
 	color: #D44D5C;
+}
+
+#contactOr {
+  margin: 25px
 }
 
 .contact-alternative {
