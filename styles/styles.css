@@ -247,7 +247,7 @@ header:after {
   padding: 0 5%;
   font-family: 'Raleway',sans-serif;
   overflow: hidden;
-  height: fit-content;
+  height: max-content;
   margin-bottom: 30px;
 }
 
@@ -372,7 +372,7 @@ header:after {
 }
 
 .about__img > img {
-  min-width: 350px;
+  min-width: 300px;
   width: 40vw;
   z-index: 9999;
   transition-delay: .8s;
@@ -702,23 +702,25 @@ header:after {
 
 .proyects-container {
   display: flex;
+  flex-direction: column;
   position: relative;
-  justify-content: space-evenly;
-  align-items: space-between;
+  justify-content: space-between;
+  align-items: center;
   gap: 2%;
   padding: 0 5%;
   font-family: 'Raleway',sans-serif;
   overflow: hidden;
-  height: 100vh;
+  height: max-content;
   margin-bottom: 30px;
 }
 
 .proyects__text {
   position: relative;
+  align-self: flex-end;
 }
 
 .cards-container {
-  position: absolute;
+  position: relative;
   top: 0;
   right: 0;
   display: flex;
@@ -726,7 +728,7 @@ header:after {
   justify-content: center;
   align-content: center;
   width: 100vw;
-  padding-top: 50px;
+  padding-top: 30px;
 }
 
 .card {
@@ -842,7 +844,7 @@ header:after {
   font-family: 'Raleway',sans-serif;
   color: #F5E9E2;
   overflow: hidden;
-  height: 100vh;
+  height: max-content;
   padding-top: 30px;
   align-items: flex-end;
 }
@@ -875,6 +877,7 @@ header:after {
   border-radius: 10%;
   padding: 30px;
   text-align: center;
+  font-size: calc(16px + .2vw);
 }
 
 .contact-form form {
@@ -890,7 +893,7 @@ header:after {
 	position:absolute;
 	top:0px;
 	left:0px;
-	font-size:16px;
+	font-size:calc(14px + .4vw);
 	color:#F5E9E2;	
 	transition: all 0.5s ease-in-out;
 }
@@ -901,7 +904,7 @@ header:after {
   background:transparent;
   width:100%;
   padding:8px 0 5px 0;
-  font-size:16px;
+  font-size:calc(14px + .2vw);
   color:#F5E9E2;
   font-family: 'Raleway', sans-serif;
 }
@@ -915,7 +918,7 @@ header:after {
 .input-container input:focus ~ label,
 .input-container input:valid ~ label{
 	top:-12px;
-	font-size:12px;
+	font-size:calc(12px + .2vw);
 	color: #D44D5C;
 }
 
@@ -940,7 +943,7 @@ header:after {
 .input-container textarea:focus ~ label,
 .input-container textarea:valid ~ label{
 	top:-12px;
-	font-size:12px;
+	font-size:calc(12px + .2vw);
 	color: #D44D5C;
 }
 
@@ -956,6 +959,7 @@ header:after {
   margin: 10px;
   transition: all .3s ease-in-out;
   color: #F5E9E2;
+  font-size: calc(10px + 0.7vw);
 }
 
 .contact-alternative a:hover {
@@ -963,7 +967,7 @@ header:after {
 }
 
 .contact-alternative a i {
-  font-size: calc(40px);
+  font-size: calc(50px + 0.7vw);
 }
 
 .reveal {
@@ -975,7 +979,7 @@ header:after {
 .footer-copy {
   text-align: center;
   font-family: 'Raleway', sans-serif;
-  font-size: calc(8px + 1vw);
+  font-size: calc(8px + 0.3vw);
   margin-bottom: 40px;
   margin-top: 40px;
   color: #F5E9E2;
@@ -1120,15 +1124,6 @@ header:after {
   .nav__menu-btn.open .nav__menu-btn__burguer::after {
     transform: rotate(-45deg) translate(35px, 35px);
   }
-
-  .about__img {
-    transform: translateY(60px);
-  }
-  
-  .about__img--photo img {
-    left: 12vw;
-  }
-
   
 }
 
@@ -1161,7 +1156,7 @@ header:after {
     padding-top: 30px;
   }
   .proyects-container {
-    height: 1400px;
+    height: max-content;
   }
   .card {
     grid-template-columns: 300px;
