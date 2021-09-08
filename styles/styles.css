@@ -353,7 +353,7 @@ header:after {
 .about__paragraph {
   font-size: calc(14px + 0.5vw);
   margin: 15px 0;
-  text-align: justify;
+  text-align: left;
 }
 
 .about__btn-container {
@@ -739,7 +739,7 @@ header:after {
   border-radius: 18px;
   background: #071108;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
-  text-align: center;
+  text-align: left;
   transition: 0.5s ease;
   margin:80px;
   height: 550px;
@@ -776,7 +776,7 @@ header:after {
   margin-top: 15px;
   font-size:15px;
   font-weight: 300;
-  text-align: center;
+  text-align: left;
   padding-right: 5px;
   padding-bottom: 10px;
   overflow-y: auto;
