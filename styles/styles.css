@@ -1071,7 +1071,7 @@ header:after {
   .nav__menu-lang li img {
     margin: 10px;
   }
-    
+  
   .nav__menu-btn {
     display: flex;
     justify-content: center;
@@ -1137,7 +1137,7 @@ header:after {
 @media only screen and (max-width: 1000px) {
   .about {
     flex-direction: column-reverse;
-    padding: 0 12%;
+    padding: 0 12% 20px;
   }
   .about__bg {
     top: 5%;
